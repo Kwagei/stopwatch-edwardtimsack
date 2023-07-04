@@ -3,12 +3,31 @@ let minutes = 0;
 let seconds = 0;
 let milliseconds = 0;
 let timerDisplay = document.getElementById('timer-display');
+let startBtn = document.querySelector("#start");
+let pauseBtn = document.querySelector("#pause");
+let resetBtn = document.querySelector("#reset");
+
+startBtn.textContent = "Start";
+
 
 // implement the below funtion using the setInteral funtion
 function startTimer() {
-
+    timer = setInterval(updateTimer, 90);
+    // startBtn.disabled = true;
 }
-
+// }
+ function updateTimer() {
+    milliseconds++;
+    if(milliseconds === 100) {
+        milliseconds = 0;
+        seconds++;
+    }
+    if(seconds === 60){
+        seconds = 0;
+        minutes++;
+    }
+    timerDisplay.textContent = formatTime(minutes, seconds, milliseconds)
+ }
 
 
 function formatTime(minutes, seconds, milliseconds) {
@@ -31,4 +50,5 @@ function resetTimer() {
     seconds = 0;
     milliseconds = 0;
     timerDisplay.textContent = '00:00:00';
+    // startTimer();
 }

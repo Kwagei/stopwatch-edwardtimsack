@@ -1,6 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "Poppins";
+  background-image: url("./img/pexels--4151043.jpg");
+}
+.wrapper{
+  font-family: "Poppins";
+}
+.timer div{
+  display: grid;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 10px 20px;
+}
 .timer {
   text-align: center;
   margin-top: 50px;
+}
+h1{
+  color: rgb(226, 23, 23);
 }
 
 #timer-display {
@@ -10,10 +34,26 @@
 button {
   margin: 10px;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 26px;
+  box-shadow: 0px 0px 10px #8b7171;
+}
+#start{
+  box-shadow: solid rgb(228, 6, 6) 16px 16px 6px;
+
 }
 
 audio {
   display: none;
+}
+@media screen and (max-width: 428px){
+  .timer div{
+    display: grid;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  button{
+    font-size: 26px;
+  }
 }
 
